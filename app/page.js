@@ -1,10 +1,11 @@
 import { getIp } from "@/lib/fetchapi";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const ipList = await getIp()
   return (
     <div>
-      {getIp()}
+      {JOSN.stringify(ipList)}
    </div>
   );
 }
